@@ -25,8 +25,8 @@ if ($_POST) {
 	$table->city_id = abs(intval($table->city_id));
 	$table->end_time = strtotime($_POST['end_time']);
 	$table->expire_time = strtotime($_POST['expire_time']);
-	$table->image = upload_image('upload_image', $team['image'], 'team');
 	$table->resize_image = upload_image('upload_image', $team['resize_image'], 'resize');
+	$table->image = upload_image('upload_image', $team['image'], 'team');
 	$table->image1 = upload_image('upload_image1',$team['image1'],'team');
 	$table->image2 = upload_image('upload_image2',$team['image2'],'team');
 	$table->sms = (isset($_POST['sms'])?'Y':'N');
