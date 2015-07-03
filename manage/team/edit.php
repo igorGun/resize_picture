@@ -10,7 +10,7 @@ if (!$id || !$team = Table::Fetch('team', $id)) {
 if ($_POST) {
 	$insert = array(
 		'title'/*,'alias','marked'*/,'team_comission', 'percentage', 'end_time', 'begin_time', 'expire_time', 'summary', 'notice', 'per_number',
-		'product', 'image',  'detail', 'userreview', 'systemreview', 'image1', 'image2', 'flv', 'card', 'btn_address',
+		'product', 'image',  'detail', 'userreview', 'systemreview', 'resize_image', 'image1', 'image2', 'flv', 'card', 'btn_address',
 		'delivery', 'mobile', 'address', 'fare', 'express', 'credit',
 		'user_id', 'city_id', 'group_id', 'partner_id','sms','ontop'
 		);
@@ -26,6 +26,7 @@ if ($_POST) {
 	$table->end_time = strtotime($_POST['end_time']);
 	$table->expire_time = strtotime($_POST['expire_time']);
 	$table->image = upload_image('upload_image', $team['image'], 'team');
+	$table->resize_image = upload_image('upload_image', $team['resize_image'], 'resize');
 	$table->image1 = upload_image('upload_image1',$team['image1'],'team');
 	$table->image2 = upload_image('upload_image2',$team['image2'],'team');
 	$table->sms = (isset($_POST['sms'])?'Y':'N');
