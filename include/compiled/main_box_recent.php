@@ -1,6 +1,6 @@
 <div class="index_small_recent">
     <div class="small_top">
-            <a href="/<?php echo $one['id'].'_'.$one['alias']; ?>"><img src="<? if (stripos($one['image'],'http')===false):?>/static/<?=$one['image']; ?><?else:?><?=$one['image']; ?><?endif;?>" alt="<?=$one['title']; ?>" width="380" border="0" height="213"/></a>
+            <a href="/<?php echo $one['id'].'_'.$one['alias']; ?>"><img src="<? if (stripos($one['resize_image'],'http')===false):?>/static/<?=$one['resize_image']; ?><?else:?><?=$one['resize_image']; ?><?endif;?>" alt="<?=$one['title']; ?>" width="380" border="0" height="213"/></a>
     </div>
     
     <div class="small_bottom">
