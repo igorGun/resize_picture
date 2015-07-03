@@ -24,8 +24,8 @@ if ($_POST) {
 	$team['city_id'] = abs(intval($team['city_id']));
 	$team['end_time'] = strtotime($team['end_time']);
 	$team['expire_time'] = strtotime($team['expire_time']);
-	$team['image'] = upload_image('upload_image', null, 'team');
 	$team['resize_image'] = upload_image('upload_image', null, 'resize');
+	$team['image'] = upload_image('upload_image', null, 'team');
 	$team['image1'] = upload_image('upload_image1', null, 'team');
     $team['image2'] = upload_image('upload_image2', null, 'team');
 	$team['create_time'] = time();
