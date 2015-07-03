@@ -80,7 +80,7 @@ while($stroka=mysql_fetch_array($d_table_team)) // перебор строк т�
 	?>
     <div class="index_small">
     <div class="small_top">
-        	<a href="/<?php echo $stroka['id'].'_'.$stroka['alias']; ?>"><img src="<?php if(1==preg_match('/http:/',$stroka['image']))echo $stroka['image']; else echo '/static/'.$stroka["image"]; ?>" alt="<?=$stroka['title']; ?>" width="380" border="0" height="213"/></a>
+        	<a href="/<?php echo $stroka['id'].'_'.$stroka['alias']; ?>"><img src="<?php if(1==preg_match('/http:/',$stroka['resize_image']))echo $stroka['resize_image']; else echo '/static/'.$stroka["resize_image"]; ?>" alt="<?=$stroka['title']; ?>" width="380" border="0" height="213"/></a>
     </div>
     
     
