@@ -1,7 +1,7 @@
 <div class="index_small">
     <div class="small_top">
-        	<a href="/<?php echo $team['id'].'_'.$team['alias']; ?>"><img src="<?php if(1==preg_match('/http:/',$team['image']))echo $team['image']; 
-            else echo '/static/'.$team["image"]; ?>" alt="<?=$team['title']; ?>" width="380" border="0" height="213"/></a>
+        	<a href="/<?php echo $team['id'].'_'.$team['alias']; ?>"><img src="<?php if(1==preg_match('/http:/',$team['resize_image']))echo $team['resize_image']; 
+            else echo '/static/'.$team["resize_image"]; ?>" alt="<?=$team['title']; ?>" width="380" border="0" height="213"/></a>
     </div>
     
     
