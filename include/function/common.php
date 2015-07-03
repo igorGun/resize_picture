@@ -482,7 +482,7 @@ function RecursiveMkdir($path) {
     }
 }
 
-function upload_image($inputname, $image=null, $type='team', $width=440) {
+function upload_image($inputname, $image=null, $type='', $width=440) {
     $year = date('Y');
     $day = date('md');
     $n = time().rand(1000,9999).'.jpg';
@@ -498,9 +498,14 @@ function upload_image($inputname, $image=null, $type='team', $width=440) {
         }
         if ($type=='user') {
             Image::Convert($z['tmp_name'], $path, 48, 48, Image::MODE_CUT);
+
         }
         else if($type=='team') {
             move_uploaded_file($z['tmp_name'], $path);
+        }
+         if ($type=='resize') {
+            Image::Convert($z['tmp_name'], $path, 380, 213, Image::MODE_CUT);
+
         }
         return $image;
     }
